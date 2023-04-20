@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/four-channels-live/static/css/main.c6028bb5.css",
+    "main.js": "/four-channels-live/static/js/main.39e92285.js",
+    "static/js/787.ad8059bc.chunk.js": "/four-channels-live/static/js/787.ad8059bc.chunk.js",
+    "index.html": "/four-channels-live/index.html",
+    "main.c6028bb5.css.map": "/four-channels-live/static/css/main.c6028bb5.css.map",
+    "main.39e92285.js.map": "/four-channels-live/static/js/main.39e92285.js.map",
+    "787.ad8059bc.chunk.js.map": "/four-channels-live/static/js/787.ad8059bc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c6028bb5.css",
+    "static/js/main.39e92285.js"
+  ]
+}
