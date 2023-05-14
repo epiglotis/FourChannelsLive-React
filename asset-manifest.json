@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/FourChannelsLive-React/static/css/main.c6028bb5.css",
-    "main.js": "/FourChannelsLive-React/static/js/main.19fcabca.js",
+    "main.js": "/FourChannelsLive-React/static/js/main.ad8c45f4.js",
     "static/js/787.ad8059bc.chunk.js": "/FourChannelsLive-React/static/js/787.ad8059bc.chunk.js",
     "index.html": "/FourChannelsLive-React/index.html",
     "main.c6028bb5.css.map": "/FourChannelsLive-React/static/css/main.c6028bb5.css.map",
-    "main.19fcabca.js.map": "/FourChannelsLive-React/static/js/main.19fcabca.js.map",
+    "main.ad8c45f4.js.map": "/FourChannelsLive-React/static/js/main.ad8c45f4.js.map",
     "787.ad8059bc.chunk.js.map": "/FourChannelsLive-React/static/js/787.ad8059bc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c6028bb5.css",
-    "static/js/main.19fcabca.js"
+    "static/js/main.ad8c45f4.js"
   ]
 }
