@@ -3,7 +3,7 @@ import { useStateContext } from '../Context/ContextProvider';
 import StreamBox from '../Components/StreamBox/StreamBox';
 import YouTube from 'react-youtube';
 
-const Main = () => {
+const Main = ({ newVideoLink }) => {
   const refHeight = useRef(null);
   const refWidth = useRef(null);
   const [width, setWidth] = useState(0);
@@ -11,9 +11,25 @@ const Main = () => {
   const { activeMenu, setActiveMenu } = useStateContext();
   const { activeScreen, setActiveScreen } = useStateContext();
   const { streamData, setStreamData } = useStateContext();
-  const [stream1, setStream1] = useState([]);
-  const [stream2, setStream2] = useState([]);
-  const [stream3, setStream3] = useState([]);
+  const [stream1, setStream1] = useState('SqHIO2zhxbA');
+  const [stream2, setStream2] = useState('-Lrxv1_i3qc');
+  const [stream3, setStream3] = useState('acwBho1oqcg');
+  const [stream4, setStream4] = useState('2i8lfP9oqvk');
+  const [newVideoId, setNewVideoId] = useState('');
+
+  useEffect(() => {
+    console.log(newVideoLink)
+    if(!newVideoLink.includes('https://www.youtube.com/watch?v=')) return;
+    try {
+      const videoId = newVideoId.replace(
+        'https://www.youtube.com/watch?v=',
+        ''
+      );
+      setStream1(videoId);
+    } catch (error) {
+      console.log(error);
+    }
+  }, newVideoLink);
 
   const getSize = () => {
     const newWidth = Math.floor(
@@ -43,18 +59,6 @@ const Main = () => {
     };
   }, []);
 
-  useEffect(() => {
-    if (activeScreen === '1') {
-      setStream1(streamData);
-    }
-    if (activeScreen === '2') {
-      setStream2(streamData);
-    }
-    if (activeScreen === '3') {
-      setStream3(streamData);
-    }
-  }, [streamData]);
-
   return (
     <div id='top' className='flex flex-col w-full h-full pr-3'>
       <div key='row1' className='flex w-full h-1/2 m-1 flex-nowrap'>
@@ -69,7 +73,7 @@ const Main = () => {
             width={width}
             height={height}
             platform={'youtube'}
-            streamId={'SqHIO2zhxbA'}
+            streamId={stream1}
           />
 
           {/* screen1, {width}, {height}, active {activeScreen} */}
@@ -86,7 +90,7 @@ const Main = () => {
             width={width}
             height={height}
             platform={'youtube'}
-            streamId={'-Lrxv1_i3qc'}
+            streamId={stream2}
           />
         </div>
       </div>
@@ -106,7 +110,7 @@ const Main = () => {
             width={width}
             height={height}
             platform={'youtube'}
-            streamId={'acwBho1oqcg'}
+            streamId={stream3}
           />
         </div>
         <div
@@ -120,7 +124,7 @@ const Main = () => {
             width={width}
             height={height}
             platform={'youtube'}
-            streamId={'2i8lfP9oqvk'}
+            streamId={stream4}
           />
         </div>
       </div>
