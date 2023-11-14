@@ -19,17 +19,18 @@ const Main = ({ newVideoLink }) => {
 
   useEffect(() => {
     console.log(newVideoLink)
-    if(!newVideoLink.includes('https://www.youtube.com/watch?v=')) return;
+    if(newVideoLink.includes('https://www.youtube.com/watch?v=') === false) return;
     try {
       const videoId = newVideoId.replace(
         'https://www.youtube.com/watch?v=',
         ''
       );
+      console.log(videoId)
       setStream1(videoId);
     } catch (error) {
       console.log(error);
     }
-  }, newVideoLink);
+  }, [newVideoLink]);
 
   const getSize = () => {
     const newWidth = Math.floor(
